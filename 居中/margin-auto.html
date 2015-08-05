@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin</title>
+	<style type="text/css">
+		.one{
+			margin: 30px;
+/*			text-align: center;*/
+			background: #f2f2f2;
+/*			line-height: 100px;*/
+			width: 800px;
+			height: 400px;
+			color: #fff;
+		}
+		.clear:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		.margin{
+			margin: 10px auto;
+			background: #4CD3D2;
+		}
+	</style>
+</head>
+<body>
+	<div class="one">
+		<div class="margin">
+			这个div会被居中吗？没有定义宽度当然不会！
+		</div>
+	</div>
+
+	<div class="one">
+		<div class="margin" style="width:300px;">
+			我的width值是固定的，我要居中！！
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- tip:将定宽块级元素的margin-left与margin-right设置为auto可以使改块级元素在父元素中居中。
+原理：根据块级元素会充满父元素，以及其margin、width值为auto的表现可知，当width固定时，margin-left、margin-right为auto会导致其值相等，且（margin-left + margin-right + width）等于父元素宽度，所以视觉上会将块级元素居中。
+
+常见错误：没有给块级元素设置width，而块级元素的width默认值为auto，css将优先用width来填充父元素。 -->

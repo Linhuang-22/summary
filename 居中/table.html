@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+</head>
+<body>
+	
+
+	<table>
+		<tr>
+			<td align="center" valign="middle" height="300px" width="300px;" style="background:#f2f2f2;">
+				<div style="background:#333;color:#fff; width:200px;">
+					我要居中
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<table>
+		<tr>
+			<td height="300px" width="300px;" style="background:#f2f2f2; vertical-align:center; text-align:center">
+				<div style="background:#333;color:#fff; width:200px;">
+					我要居中
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+<!-- 如果你使用的是表格的话，那完全不用为各种居中问题而烦恼了，只要用到 td(也可能会用到 th)元素的 align="center" 以及 valign="middle" 这两个属性就可以完美的处理它里面内容的水平和垂直居中问题了,而且表格默认的就会对它里面的内容进行垂直居中。 -->
+
+<!-- 如果想在css中控制表格内容的居中，垂直居中可以使用 vertical-align:middle，至于水平居中，貌似css中是没有相对应的属性的,但是在IE6、7中我们可以使用text-align:center来对表格里的元素进行水平居中，IE8+以及谷歌、火狐等浏览器的text-align:center只对行内元素起作用，对块状元素无效。
+所以：在ie6、7中可以通过css的text-algin来控制表格内容的水平方向的对齐，无论内容是行内元素还是块状元素都有效。
+	  但在ie8+以及chrome、firefox等浏览器中的text-align:center对块状元素无效，只能用表格自有的align属性。 -->
+
+
+<!-- 同样的，通过css的display:table-cell来模拟表格，（注意这里会生成匿名表对象的）但是，这种方法只能在IE8+、谷歌、火狐等浏览器上使用，IE6、IE7都无效。（因为没有html属性了啊哈哈哈） -->
